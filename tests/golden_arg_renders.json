@@ -1,0 +1,8 @@
+{
+ "Z1": "turn=3 level=0 score=0 lives=-\nGOAL CHAIN: G0001 > G0002\nACTIVE: (no active commitment step)",
+ "Z2": "ROSTER: id | kind | anchor | rung | interactions | last_consequence | serves\nR0001 | percept-cluster | r1-1c1-1 | ANCHORED | 0 | - | G0001",
+ "Z3": "RULES/RELATIONS:\n(none yet)",
+ "Z4": "UNTOUCHED FRONTIER:\nACTION1 (global)\nR0001 \u00d7 ACTION6",
+ "Z5": "RENDER: 8x8 grid (hex colors; row r0 first):\n00000000\n00000000\n00000000\n00000000\n00000000\n00000000\n00000000\n00000000\nworking-set region joins:\n  \u00abR:R0001 ANCHORED @r1c1\u00bb color=7 size=1",
+ "Z6": "GOAL CARD [G0002] status=PROPOSED\n  statement: LEARN-ACTIONS\n  achievement_test: {\"op\": \"LEARN_ACTIONS\"}\n  BOUND REFERENTS (id | anchor coordinates | render xref | rung | last):\n    R0001 | @r1c1 | @r1c1 | ANCHORED | -\n  STEP: (no active commitment step)"
+}

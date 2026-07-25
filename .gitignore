@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+*.db
+*.db-shm
+*.db-wal
+recordings/
+*.recording.jsonl
+.DS_Store
+nohup.out
+*.log

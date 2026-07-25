@@ -1,0 +1,37 @@
+[project]
+name = "arg"
+version = "0.1.0"
+description = "ARG: consequence-earned grounding for long-horizon agents (ARC-AGI-3 instantiation)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Mohsen Arjmandi" }]
+requires-python = ">=3.12"
+dependencies = [
+    "dotenv>=0.9.9",
+    "dspy==2.5.32",
+    "dspy-ai==2.5.32",
+    "google-auth>=2.0.0",
+    "google-cloud-aiplatform>=1.38.0",
+    "google-genai>=0.3.0",
+    "litellm==1.51.0",
+    "pillow>=11.2.1",
+    "pydantic>=2.11.7",
+    "requests>=2.32.4",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "pytest>=8.4.1",
+    "ruff>=0.11.4",
+]
+
+[tool.mypy]
+strict = true
+disallow_untyped_defs = true
+exclude = [
+    "tests",
+]
+
+[tool.ruff.lint]
+extend-select = ["I"]
