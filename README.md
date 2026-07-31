@@ -4,7 +4,7 @@
 
 ARG is an agent architecture in which a language model's output never becomes belief directly. Every claim enters a deterministic **Executive** as a typed proposal in a closed vocabulary, and is admitted only by *earning* it — a perceived object or rule climbs grounding tiers solely when a pre-registered prediction about its consequences is matched against observation by code. Everything is append-only and replayable: every belief, plan, and achievement is a queryable row with the receipts that produced it.
 
-ARG is the successor to [Sensi](https://github.com/arjmandi/sensi) ([arXiv 2603.17683](https://arxiv.org/abs/2603.17683)), rebuilt from that project's two controlled failure results (binding loss and commitment loss) so that both mechanisms are externalized in code and measured separately. It is evaluated on [ARC-AGI-3](https://three.arcprize.org) interactive games, entered with zero prior knowledge, and is substrate-general by design — nothing above the environment adapter knows what a game is.
+ARG is the successor to [Sensi](https://github.com/arjmandi/sensi) ([arXiv 2603.17683](https://arxiv.org/abs/2603.17683)), rebuilt around the failure Sensi diagnosed — a self-consistent hallucination cascade (binding loss, in the present taxonomy) — with the commitment component drawn from the goal-drift literature, so that both drift components are externalized in code and measured separately. It is evaluated on [ARC-AGI-3](https://three.arcprize.org) interactive games, entered with zero prior knowledge, and is substrate-general by design — nothing above the environment adapter knows what a game is.
 
 **Author:** Mohsen Arjmandi · Independent researcher · July 2026
 
