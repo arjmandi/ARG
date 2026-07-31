@@ -104,7 +104,7 @@ Removing both mechanisms **floors the system upstream of drift**: with neither t
 
 - It does **not** invalidate §5.1–5.3. Those are mechanism measurements against internal reference plans, defined and gated independent of whether any level is won; they are the same numbers whether the game is solved or not.
 - It **does** mean the system has not yet found the *mechanic that scores* on these games. The observed behavior is a disciplined experimentalist that recognizes its own knowledge deficits, files targeted hypotheses, runs bounded experiments with pre-registered predictions, demotes wrong theories with receipts, and re-opens its plan honestly — testing roughly three wrong object-scoped theories per 400-action run. The open problem is hypothesis *quality and ordering*, not machinery.
-- The baselines are also at zero, consistent with this game family's public history (frontier systems below 1% at launch [6]; early entrants naming exploration and belief-maintenance, not puzzle-solving, as the bottleneck [7]).
+- The baselines are also at zero. Frontier systems scored below 1% on ARC-AGI-3 at launch [6]; a later analysis [7] finds many *public* games in this family solvable by non-intelligent strategies — so we treat 0 completions on them as a genuine gap, not one excused by difficulty, and the efficacy null is stated on exactly those terms.
 
 ### 5.5 A small model runs the whole loop cleanly
 
@@ -127,7 +127,7 @@ The honest headline is therefore asymmetric: **a demonstrated dissociation of co
 
 **Goal drift** is established and benchmarked [1, 2]; we add a component decomposition and a per-cell measurement rather than a new aggregate score. **Long-context reference and positional bias** (spaced multi-piece evidence, middle-position loss) motivate the binding-drift construct and its positional repair [3, 4]; our finding is that once the join is code-owned the positional failure does not manifest as drift. **Compounding-error / commitment loss** in long interactions motivates the commitment-drift construct [1, 2]; we isolate it. **Coreference caches** (LQCA-style mechanical joins; LINK-KG-style persistent canonical-referent caches) are prior art for the join's *plumbing*, and we concede the overlap openly — the delta is that ARG's referents climb grounding tiers only through Executive-verified consequence receipts, a substrate static-text caches lack. **Propose-and-verify** control (LLM-Modulo planning; "Symbolic Governor"; "Blueprint First, Model Second") shares the pattern of a deterministic checker, but there the verifier checks *outputs*; here the deterministic side owns *belief*. **Grounding** is claimed only in Floridi's causal-informational sense relative to a formal micro-world [9] (see §8); we implement his sanctioned route of curation/verification/tooling and claim nothing stronger. **Small agent models** [8]: we give a positive existence-point for the "structure over scale" position.
 
-*(Citation note: the binding/positional class is pinned to LongPiBench [3] and the lost-in-the-middle effect [4]; the commitment class is the objective-drift benchmark line [1, 2]. LQCA/LINK-KG coreference caches and the propose-verify systems are named in-text and cited in full in the design's reference ledger. The remaining arXiv ids in §10 are inherited from the source design docs and are flagged there as unverified — confirm each before submission.)*
+*(Citation note: every numeric reference was checked against live arXiv on 2026-07-31 — the id resolves, the title matches, and the abstract supports the in-text claim — except [5], the author's own predecessor paper, whose binding/commitment framing is flagged in §10 for author confirmation. LQCA/LINK-KG coreference caches and the propose-verify systems are named in-text and cited in full in the design's reference ledger.)*
 
 ## 8. Limitations and scope
 
@@ -165,21 +165,16 @@ The GDS taxonomy, shadow reference, and validity gate cited in §4 are implement
 
 ## References
 
-**Verified and pinned:**
+Every entry was checked against live arXiv on 2026-07-31: the id resolves, the title matches, and — except where flagged — the abstract supports the claim made in-text.
 
+[1] R. Arike, E. Donoway, H. Bartsch, M. Hobbhahn. *Evaluating Goal Drift in Language Model Agents.* arXiv:2505.02709.
+[2] A. Menon et al. *Inherited Goal Drift: Contextual Pressure Can Undermine Agentic Goals.* arXiv:2603.03258.
 [3] *Distance between Relevant Information Pieces Causes Bias in Long-Context LLMs* (LongPiBench). arXiv:2410.14641.
-[4] *Lost in the Middle: How Language Models Use Long Contexts.* arXiv:2307.03172.
+[4] N. F. Liu et al. *Lost in the Middle: How Language Models Use Long Contexts.* arXiv:2307.03172.
+[5] M. Arjmandi. *Sensi: Learn One Thing at a Time — Curriculum-Based Test-Time Learning for LLM Game Agents.* arXiv:2603.17683. — **author to confirm:** the paper's headline framing is curriculum-based test-time learning; the "binding-loss / commitment-loss existence proofs" and the specific run figures cited in §1 must be traceable to this paper (or its experiments) before submission.
+[6] ARC Prize Foundation. *ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence.* arXiv:2603.24621.
+[7] Liew Keong Han. *Explore Before You Solve: The Speed–Depth Trade-off in Epistemic Agents for ARC-AGI-3.* arXiv:2605.25931.
+[8] P. Belcak et al. (NVIDIA). *Small Language Models are the Future of Agentic AI.* arXiv:2506.02153.
+[9] L. Floridi, Y. Jia, F. Tohmé. *A Categorical Analysis of Large Language Models and Why LLMs Circumvent the Symbol Grounding Problem.* arXiv:2512.09117.
 
-**Inherited from the source design docs — UNVERIFIED; confirm each before submission.** The "HIPIF" placeholder that previously stood in for the commitment class did not resolve to any real paper and has been removed; treat the ids below with the same suspicion until independently checked.
-
-[1] Goal drift in LLM agents. arXiv:2505.02709.
-[2] Measuring goal drift over long interactions. arXiv:2603.03258.
-[5] Sensi (predecessor system; binding-loss and commitment-loss existence proofs). arXiv:2603.17683.
-[6] ARC-AGI-3: interactive reasoning benchmark. arXiv:2603.24621.
-[7] Early ARC-AGI-3 agent report (exploration / belief-maintenance as bottleneck). arXiv:2605.25931.
-[8] Small language models are the future of agentic AI. arXiv:2506.02153.
-[9] Floridi et al., on LLMs and symbol grounding ("epistemic parasitism"). arXiv:2512.09117.
-
-*Candidate for the commitment / agentic-instruction-following class, flagged not pinned: AGENTIF, arXiv:2505.16944 — confirm it matches the intended construct before citing.*
-
-*Coreference-cache prior art (LQCA, LINK-KG) and propose-verify control (LLM-Modulo, "Symbolic Governor," "Blueprint First, Model Second") are discussed in §7 and cited in full in the design document's reference ledger (`docs_arg_design.md`).*
+*"HIPIF," which earlier stood in for the commitment class, did not resolve to any real paper and was removed. Coreference-cache prior art (LQCA, LINK-KG) and propose-verify control (LLM-Modulo, "Symbolic Governor," "Blueprint First, Model Second") are discussed in §7 and cited in full in the design document's reference ledger (`docs_arg_design.md`).*
