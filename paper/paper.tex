@@ -9,6 +9,9 @@
 
 \documentclass{article}
 
+% NeurIPS uses NUMBERED citations; force natbib numeric before the style loads it.
+\PassOptionsToPackage{numbers,sort&compress}{natbib}
+
 % --- BUILD SWITCH 1: template mode -------------------------------------------
 % Workshop submission (anonymous, line numbers):
 \usepackage{neurips_2026}
@@ -113,9 +116,9 @@ maximally salient (the goal-abandonment regime measured in the agent literature;
 positional: an external commitment store executed by code.
 \end{itemize}
 The binding component is not merely hypothesized: prior work on a predecessor
-system~\citep{arjmandi2026sensi} diagnosed a \emph{self-consistent hallucination
-cascade} in which perception-layer errors propagate into internally coherent but
-factually wrong world models. What that work names a perception-layer cascade is,
+system~\ifanon\citep{sensi_anon}\else\citep{arjmandi2026sensi}\fi{} diagnosed a
+\emph{self-consistent hallucination cascade} in which perception-layer errors
+propagate into internally coherent but factually wrong world models. What that work names a perception-layer cascade is,
 in the present taxonomy, binding loss --- a referent grounded in the model's own
 prior text rather than in observation. Our instrument externalizes a repair for
 each failure as an independent switch, so the two can be turned off, and measured,

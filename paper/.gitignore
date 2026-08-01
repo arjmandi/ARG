@@ -1,0 +1,16 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdf
+
+# NeurIPS style/bib-style — fetch from the official author kit; not redistributed in-repo
+neurips_2026.sty
+neurips_2026.bst
+kit/
+kit.zip
